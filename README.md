@@ -1,9 +1,9 @@
 # Siva
 Siva is a Rust library for building static site.
 
-- **Static Site Generator:**Siva generates simple static html files. That is fastest way in web.
-- **Components:**Generate html from your components system. That is new concept.
-- **WebAssembly:**A part of javascript works WebAsssembly.
+- **Static Site Generator:** Siva generates simple static html files. That is fastest way in web.
+- **Components:** Generate html from your components system. That is new concept.
+- **WebAssembly:** A part of javascript works WebAsssembly.
 
 ## Installation
 ```Rust:Cargo.toml
