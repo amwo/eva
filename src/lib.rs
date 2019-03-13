@@ -1,3 +1,5 @@
+extern crate hyper;
+
 pub mod server;
 
 #[cfg(test)]
