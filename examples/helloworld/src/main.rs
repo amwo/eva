@@ -1,5 +1,5 @@
-extern crate siva;
+extern crate eva;
 
 fn main() {
-    siva::app::<combine::Pages>();
+    eva::app::<combine::Pages>();
 }

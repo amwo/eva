@@ -1,13 +1,43 @@
 //! Compress HTML/CSS/Javascript
 
-pub fn type_of<T>(_: &T) {
-    println!("{}", unsafe { std::intrinsics::type_name::<T>() });
+fn remove_spaces(c: char) -> char {
+    if c == '\n' || c == ' ' || c == '\t' || c == '\r' || c == '　' {
+        '\u{00}' // Return unicode blank character
+    } else {
+        c
+    }
 }
 
-//use regex::Regex;
+pub fn comp(s: &str) -> String {
+    let tags = ["html", "body"];
+    let mut p = 0;
+    for c in s.chars() {
+        if c == '<' {
+            p = 1;
+        } else {
+            p = 0;
+        }
+    }
+
+    "Hello".to_string()
+}
+
+// Backup
+//fn remove_spaces(c: char) -> char {
+//    if c == '\n' || c == ' ' || c == '\t' || c == '\r' || c == '　' {
+//        // Return unicode blank character
+//        '\u{00}'
+//    } else {
+//        c
+//    }
+//}
+//
+//pub fn comp(s: &str) -> String {
+//    s.chars().map(|c| remove_spaces(c)).collect()
+//}
 
 #[test]
-fn comp() {
+fn test_comp() {
     let html = r#"
         <div id="test">
             <!-- normal comment -->
@@ -19,24 +49,12 @@ fn comp() {
         </div>
     "#;
 
-    println!(
-        "{}",
-        "==============================================================================="
-    );
+    println!("{}", "===============================================================================");
+    println!("{}", comp(html));
+    println!("{}", "===============================================================================");
+}
 
-    //let mut p = 0;
-    for c in html.chars() {
-        if c == '\n' || c == '\t' || c == '　' {
-            c.escape_default();
-        } else {
-            type_of(&c);
-        }
-    }
-
-    println!("{}", html);
-
-    println!(
-        "{}",
-        "==============================================================================="
-    );
+// Other utils
+pub fn type_of<T>(_: &T) {
+    println!("{}", unsafe { std::intrinsics::type_name::<T>() });
 }

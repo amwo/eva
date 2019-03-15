@@ -1,11 +1,9 @@
+#![feature(core_intrinsics)]
+
 extern crate hyper;
+extern crate regex;
 
 pub mod server;
+pub mod utils;
 
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
+pub fn app() {}
