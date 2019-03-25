@@ -44,5 +44,17 @@ fn main() {
 }
 ```
 
+## Getting Started
+
+    $ cargo dev
+
+To loanched develop server with hot reloading.
+
+## Production build
+
+    $ cargo gen
+
+Generate to html website into `/public/`.
+
 ## License
 Eva is MIT licensed.
