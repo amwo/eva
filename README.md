@@ -5,6 +5,25 @@ Eva is a Rust library for building static site.
 - **Components:** Generate html from your components system. That is new concept.
 - **WebAssembly:** A part of javascript works WebAsssembly.
 
+## Requires
+For all Eva developer.
+```
+cargo install cargo-dev
+```
+If you need REST API.
+```
+cargo install cargo-rest
+```
+If you need CLI static site generator.
+```
+cargo install cargo-gen
+```
+
+## Usage
+### Command Line Tool
+
+### Rest API Server
+
 ## Installation
 ```Rust:Cargo.toml
 [dependencies]
