@@ -8,6 +8,10 @@ fn remove_spaces(c: char) -> char {
     }
 }
 
+fn read_file(c: char) -> String {}
+fn write_file(c: char) -> String {}
+fn sync_ftp(path: char) {}
+
 pub fn comp(s: &str) -> String {
     let tags = ["html", "body"];
     let mut p = 0;
