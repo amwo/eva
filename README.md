@@ -90,7 +90,8 @@ To loanched develop server with hot reloading.
 
     $ cargo gen
 
-Generate to html website into `/public/`.
+## Test
+    cargo test -- --nocapture
 
 ## License
 Eva is MIT licensed.

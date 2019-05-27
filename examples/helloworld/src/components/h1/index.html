@@ -1,1 +1,19 @@
-<h1></h1>
+<h1 class="root" onclick="main()">{ hello } { world }</h1>
+
+<style>
+.root {
+    background: #000;
+    color: #fff;
+    padding: 0;
+}
+</style>
+
+<script>
+    let state;
+    let hello = 'hello'
+    let world = state.world
+
+    function main() {
+        console.log('world')
+    }
+</script>

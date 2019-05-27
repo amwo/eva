@@ -5,5 +5,4 @@ authors = ["am <tsushimori@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-hyper = "0.12.25"
-regex = "1.1.2"
+regex = "1.1.6"

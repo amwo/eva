@@ -1,10 +1,15 @@
-struct Vdom {}
+pub mod vdom;
+
+struct Vdom;
 
 impl Vdom {
+    pub fn g() {
+        println!("{}", "from g");
+    }
     pub fn init() {}
 
     pub fn diff(self) {
-        println!("{}", self);
+        //println!("{}", self);
     }
 
     pub fn patch(self) {}

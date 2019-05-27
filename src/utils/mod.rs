@@ -1,61 +1,10 @@
 //! Compress HTML/CSS/Javascript
+use regex::Regex;
 
-fn remove_spaces(c: char) -> char {
-    if c == '\n' || c == ' ' || c == '\t' || c == '\r' || c == '　' {
-        '\u{00}' // Return unicode blank character
-    } else {
-        c
-    }
-}
-
-fn read_file(c: char) -> String {}
-fn write_file(c: char) -> String {}
-fn sync_ftp(path: char) {}
-
-pub fn comp(s: &str) -> String {
-    let tags = ["html", "body"];
-    let mut p = 0;
-    for c in s.chars() {
-        if c == '<' {
-            p = 1;
-        } else {
-            p = 0;
-        }
-    }
-
-    "Hello".to_string()
-}
-
-// Backup
-//fn remove_spaces(c: char) -> char {
-//    if c == '\n' || c == ' ' || c == '\t' || c == '\r' || c == '　' {
-//        // Return unicode blank character
-//        '\u{00}'
-//    } else {
-//        c
-//    }
-//}
-//
-//pub fn comp(s: &str) -> String {
-//    s.chars().map(|c| remove_spaces(c)).collect()
-//}
-
-#[test]
-fn test_comp() {
-    let html = r#"
-        <div id="test">
-            <!-- normal comment -->
-            <div>content</div>
-            <!--[if lte IE 8]>
-            <div class="warning">This old browser is unsupported and will most likely display funky things.
-            </div>
-            <![endif]-->
-        </div>
-    "#;
-
-    println!("{}", "===============================================================================");
-    println!("{}", comp(html));
-    println!("{}", "===============================================================================");
+pub fn comp(data: &'static str) -> &'static str {
+    let r = Regex::new(r"\n|\t|\s+").unwrap();
+    println!("{}", r.replace_all(data, ""));
+    data
 }
 
 // Other utils
