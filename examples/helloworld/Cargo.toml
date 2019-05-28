@@ -1,10 +1,8 @@
 [package]
 name = "helloworld"
 version = "0.1.0"
-authors = ["amwo <nuude.ad@gmail.com>"]
+authors = ["am <tsushimori@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-siva = "0.1.0"
-
-[eva]
+eva = { path = "../.." }
