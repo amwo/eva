@@ -1,5 +1,3 @@
-pub mod vdom;
-
 struct Vdom;
 
 impl Vdom {

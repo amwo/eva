@@ -1,5 +1,3 @@
-extern crate eva;
-
 fn main() {
-    eva::app::<combine::Pages>();
+    eva::app::<helloworld::App>();
 }
