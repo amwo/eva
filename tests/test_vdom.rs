@@ -1,8 +1,8 @@
 extern crate eva;
 
-use eva::vdom;
+use eva::vdom::html;
 
 #[test]
 fn test_vdom() {
-    vdom::g();
+    html!(#"<html></html>"#);
 }
