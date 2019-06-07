@@ -1,3 +1,5 @@
+Struct Attrs {}
+
 static A: &'static [&str] = &[
     // HTML5 Attributes
     "accept",
